@@ -133,7 +133,7 @@ server <- function(input, output) {
     
     if (input$facet == "No") {
       
-    ggplot(data = modalities(), aes(x = year)) + geom_line(aes(y = no_contrib, colour = '0008FF')) + geom_line(aes(y = fixed_contrib, colour = 'FF0000')) + geom_line(aes(y = growing_contrib, colour = '00FF08')) + labs(title = 'Three Modes of Investing', x = "Years", y = "Future Value in $") + scale_color_discrete(name = "Contribution Types", labels = c('None', 'Fixed', 'Growing')) + theme_gray()
+ggplot(data = modalities(), aes(x = year)) + geom_line(aes(y = no_contrib, colour = '0008FF')) + geom_line(aes(y = fixed_contrib, colour = 'FF0000')) + geom_line(aes(y = growing_contrib, colour = '00FF08')) + labs(title = 'Three Modes of Investing', x = "Years", y = "Future Value in $") + scale_color_discrete(name = "Contribution Types", labels = c('None', 'Fixed', 'Growing')) + theme_gray() + geom_point(aes(y = no_contrib, color = '0008FF')) + geom_point(aes(y = fixed_contrib, color = 'FF0000')) + geom_point(aes(y = growing_contrib, color = '0FF08'))
     
     
       
