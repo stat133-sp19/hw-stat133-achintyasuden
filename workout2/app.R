@@ -5,7 +5,7 @@ library(ggplot2)
 library(reshape2)
 
 
-# UI
+# UI 
 
 ui <- fluidPage(
   titlePanel("Savings Simulation"),
@@ -57,7 +57,7 @@ ui <- fluidPage(
 
 
 
-# Server
+#Server
 
 
 server <- function(input, output) {
