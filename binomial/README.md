@@ -1,7 +1,17 @@
 # Workout 3
 
 ## Binomial Package
-**To install, use** `devtools::install_github('stat133-sp19/hw-stat133-achintyasuden/binomial/binomial')`
+**To install**`
+Install the development version from GitHub via the package
+`"devtools"`:
+
+``` r
+# development version from GitHub:
+#install.packages("devtools") 
+
+# install "binomial" (with vignettes)
+devtools::install_github('stat133-sp19/hw-stat133-achintyasuden/binomial/binomial', build_vignettes = TRUE)
+```
 
 ## Purpose
 *The package `"binomial"` describes perhaps the most famous probability distribution among discrete random variables. This is the theoretical probability model that we use when calculating probabilities about the number of successes in a fixed number of random trials performed under identical conditions (assuming a constant probability of success on each trial).  
