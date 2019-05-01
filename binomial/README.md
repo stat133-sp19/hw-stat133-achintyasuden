@@ -1,8 +1,8 @@
 # Workout 3
 
 ## Binomial Package
-**To install**`
-Install the development version from GitHub via the package
+**To install**  
+
 `"devtools"`:
 
 ``` r
