@@ -122,7 +122,7 @@ server <- function(input, output) {
     modalities <- data.frame(year, no_contrib, fixed_contrib, growing_contrib)
     return(modalities)
     
-    modalities_melt <- melt(modalities, id.vars = c("Year"))
+    modalities_melt <- melt(modalities(), id.vars = c("Year"))
     
     
     
@@ -140,7 +140,7 @@ ggplot(data = modalities(), aes(x = year)) + geom_line(aes(y = no_contrib, colou
       
     } else {
       
-      ggplot(modalities_melt(), aes(x = Year, y = value, col = variable)) + geom_line() + facet_grid(.~variable) + geom_point() + ggtitle("Three Modes of Investing") + geom_area(alpha = 0.4) + aes(fill = variable)
+      ggplot(modalities_melt, aes(x = Year, y = value, col = variable)) + geom_line() + facet_grid(.~variable) + geom_point() + ggtitle("Three Modes of Investing") + geom_area(alpha = 0.4) + aes(fill = variable)
       
     }
     
